@@ -43,9 +43,11 @@ public:
         if (empty()){throw std::out_of_range("List is empty");}
 
         Node<T>* temp = head->prev;
+        T val = temp->data;
         head->prev->prev->next =  head;
         head->prev = head->prev->prev;
         delete temp;
+        return val;
     }
 
     void clear() {
@@ -72,9 +74,9 @@ public:
     }
 
     void remove(int pos) {
-        if(pos<0 || pos>=size()) {throw std::out_of_range("Index out of range");}
-
         if(empty()) {throw std::out_of_range("List is empty");}
+
+        if(pos<0 || pos>=size()) {throw std::out_of_range("Index out of range");}
 
         Node<T>* temp = head->next;
         int i = 0;
