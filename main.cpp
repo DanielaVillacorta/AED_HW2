@@ -20,7 +20,7 @@ public:
         head->prev = head;
     }
   bool empty() {
-        return 0;
+        return head->next == head; // si el next del head (el segundo) apunta al head, la lista esta vacia
     }
 
     T front() {
