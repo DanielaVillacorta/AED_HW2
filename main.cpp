@@ -22,7 +22,7 @@ public:
 
     void clear() {
         auto pt1 = head->next;
-        while(pt1->next != head) {
+        while(pt1!= head) {
             auto temp = pt1;
             pt1 = pt1->next;
             delete temp;
@@ -43,16 +43,22 @@ public:
         if(pos<0 or pos>=this->size()) {
             throw std::out_of_range("Index out of range");
         }
-        if(this->empty()) {
-            throw std::out_of_range("List is empty");
-        }
         Node<T>* temp = head->next;
         int i = 0;
-        while (i <= pos) {
+        while (i < pos) {
             temp = temp->next;
             i++;
         }
         return temp->data;
+    }
+
+    void reverse() {
+        Node<T>* actual = head;
+        do {
+            Node<T>* ptr = actual->next;
+            actual->next = actual->prev;
+            actual->prev = ptr;
+        }while(actual!=head);
     }
 };
 
