@@ -1,0 +1,3 @@
+C:/Users/marce/CLionProjects/practica_copa/AED_HW2/cmake-build-debug/CMakeFiles/AED_HW2.dir
+C:/Users/marce/CLionProjects/practica_copa/AED_HW2/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/marce/CLionProjects/practica_copa/AED_HW2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
