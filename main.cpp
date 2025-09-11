@@ -171,6 +171,7 @@ public:
             Node<T>* ptr = actual->next;
             actual->next = actual->prev;
             actual->prev = ptr;
+            actual = ptr;
         }while(actual!=head);
     }
 };
